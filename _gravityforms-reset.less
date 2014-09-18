@@ -1,0 +1,96 @@
+.gform_wrapper ul {
+  .list-unstyled();
+}
+.gform_wrapper li {
+  .form-group();
+}
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: @state-danger-text;
+}
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  .form-control();
+  .border-top-radius(0);
+  .border-bottom-radius(0);
+  .box-shadow(none);
+  background-color: #eee;
+  border-color: #ddd;
+  height: 40px;
+  color:@text-color;
+}
+.ginput_container textarea {
+  height: auto;
+}
+.gform_button {
+  .btn();
+  .btn-primary();
+}
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: @brand-primary;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @brand-primary;
+    background-color: lighten(@brand-primary,45%);
+    color: @brand-primary;
+    .form-control-focus(@alert-danger-text);
+  }
+}
+.validation_error {
+  .alert();
+  .alert-danger();
+}
+#gforms_confirmation_message {
+  .alert();
+  .alert-success();
+}
+
+.ginput_container input[type="checkbox"], .ginput_container input[type="radio"] {
+float: left; width: 40px;width:auto;height: auto;
+}
+
+.ginput_container .gfield_checkbox label, .ginput_container .gfield_radio label {
+margin-top:0;margin-left: 10px;font-weight: normal;
+}
+.ginput_container > ul > li {margin: 0;height: 25px;}
+.field-weight-normal > label {font-weight: normal;}
+.field-margin-bottom > label {margin-bottom:@line-height-computed;}
+.gfield_description.validation_message {position: absolute!important;right: 10px;top: 0;background-color:@brand-primary;.arrow(10px, @brand-primary, bottom, 50%, 0, @brand-primary);padding: 0 10px;color: fade(white,80%);}
+
+// Honeypot styling, this hides the field that trips up BOTS but is not shown to a user
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+     display: none !important;
+    left: -9000px;
+    position: absolute !important;
+}
+
+// make the asterisk more red
+.gform_wrapper span.gfield_required {color:red}
+
+
+// progress bar styles
+.gf_progressbar {background-color: @gray-lighter}
+.gf_progressbar_percentage {background-color: @brand-primary;text-align: center;color: white;line-height: 25px}
+h3.gf_progressbar_title {margin-bottom: 5px}
+.gform-line-top {border-top: 1px solid @gray-lighter;padding-top: 20px}
+
+//extra control styles
+.kill-pad {padding: 0;}
+.fl {padding-right: 10px; // kills right side padding on form input container
+   @media (max-width: @screen-sm-min) {padding-right:0 }
+   }
+.fr {padding-left: 10px; // kills left side padding on form input container
+   @media (max-width: @screen-sm-min) {padding-left:0 }
+   }
+.hide-label > label {display: none;} // hides the label of a input container
